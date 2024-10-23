@@ -1,1 +1,1 @@
-// Xoa 3
+// THu tren mac
