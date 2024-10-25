@@ -2,12 +2,21 @@ import { useEffect, useState } from "react";
 import logo from '../assets/logo.svg';
 import './Navbar-item.css';
 import { Link } from "react-scroll";
+import { useNavigate } from 'react-router-dom';
 
 // import icons from react icons
 import { GrLanguage } from "react-icons/gr";
 import { FaXmark, FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    // Navigate to the separate /login page
+    navigate('/login');
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -60,7 +69,7 @@ const Navbar = () => {
 
           <div className="space-x-12 hidden lg:flex items-center">
             
-            <button className="bg-brandPrimary text-white  py-2 px-4 transition-all duration-300 
+            <button onClick={handleLoginClick} className="bg-brandPrimary text-white  py-2 px-4 transition-all duration-300 
               rounded hover:bg-neutralDGrey">Login
             </button>
           </div>
