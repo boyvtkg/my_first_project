@@ -9,7 +9,7 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.svg";
 
 const MyFooter = () => {
   return (
@@ -26,10 +26,10 @@ const MyFooter = () => {
                 alt=""
                 className="w-10 inline-block items-center"
               />
-              <span>NEXCENT</span>
+              <span>Word of Life</span>
             </a>
             <div className="my-8">
-              <p className="mb-1"> Copyright © 2020 Nexcent ltd.</p>
+              <p className="mb-1"> Copyright ©2024 Created by WoL</p>
               <p>All rights reserved</p>
             </div>
 

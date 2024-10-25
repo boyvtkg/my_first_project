@@ -1,0 +1,10 @@
+.block {
+    padding: 5px 10px; /* Set padding here instead of only on hover */
+  }
+
+.hover\:text-brandPrimary:hover {
+    color: white; /* Keep the original text color */
+    background-color: #16689A; /* Replace with your desired background color */
+    border-radius: 5px; /* Optional rounded corners */
+  }
+  

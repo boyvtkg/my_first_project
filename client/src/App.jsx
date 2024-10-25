@@ -1,8 +1,13 @@
 
 import "./App.css";
+import About from "./components/About";
+import Blog from "./components/Blog";
+import MyFooter from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import MyFooter from "./components/Footer";
+import Newsletter from "./components/Newsletter";
+import Product from "./components/Product";
+import Services from "./components/Services";
 
 function App() {
 
@@ -10,7 +15,13 @@ function App() {
   return (
     <>
       <Navbar/>
+      <About/>
       <Home/>
+      <Services/>
+      <Product/>
+      <Blog/>
+      <Newsletter/>
+      <MyFooter/>
     </>
   );
 }
