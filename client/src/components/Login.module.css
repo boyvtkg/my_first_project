@@ -9,13 +9,13 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #5F41E4;
+    background-color: #5F41E4;
     width: 100%;
     padding: 0 0.6rem;
 }
 
 
-.login-container {
+.loginPage .login-container {
     max-width: 410px;
     margin: 0 auto;
     border-radius: 0.5rem;
@@ -68,18 +68,18 @@
     pointer-events: none;
 }
 
-.login-form .input-wrapper .input-field:focus ~i:not(.eye-icon) {
+.login-form .input-wrapper .input-field:focus~i:not(.eye-icon) {
     border-color: #5f41e4
 }
 
 .login-form .input-wrapper i.eye-icon {
     font-size: 1.25rem;
-    cursor: pointer; 
+    cursor: pointer;
     right: 0.9rem;
     display: none;
 }
 
-.login-form .input-wrapper .input-field:valid ~ i.eye-icon {
+.login-form .input-wrapper .input-field:valid~i.eye-icon {
     display: block;
 }
 
