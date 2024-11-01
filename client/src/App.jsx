@@ -1,30 +1,28 @@
 
 import "./App.css";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import MyFooter from "./components/Footer";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Newsletter from "./components/Newsletter";
-import Product from "./components/Product";
-import Services from "./components/Services";
-import Login from './components/Login';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { About, Blog, MyFooter, Home, Navbar, Newsletter, Product, Services } from './components';
+import { SubmissionForm, Transactions, TransFilter } from './pages/dashboardPages';
+import Login from './pages/Login';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from "./pages/Dashboard";
 
 function App() {
 
 
   return (
-    <Router>
+    <BrowserRouter>
     <Routes>
       {/* Route for the Login Page - completely separate */}
       <Route path="/login" element={<Login />} />
-
+      <Route path="/dashboard/*" element={<Dashboard />} />
+      <Route path="/dashboard/submissionform" element={<SubmissionForm />} />
+      <Route path="/dashboard/transactions" element={<Transactions />} />
+      <Route path="/dashboard/transfilter" element={<TransFilter />} />
       {/* Route for your main website with the Navbar */}
       <Route
         path="/*" // Use wildcard to catch all other paths
         element={
-    <>
+      <>
     
       <Navbar/>
       <About/>
@@ -37,8 +35,8 @@ function App() {
     </>
     }
     />
-  </Routes>
-</Router>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
