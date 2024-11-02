@@ -9,7 +9,7 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 const MyFooter = () => {
   return (

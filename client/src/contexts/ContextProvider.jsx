@@ -3,13 +3,15 @@ import React, { createContext, useContext, useState } from 'react';
 const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
-    const [activeMenu, setActiveMenu] = useState(true);
+    const [activeMenu, setActiveMenu] = useState(false);
     const [screenSize, setScreenSize] = useState(undefined);
-    
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => setIsClicked(!setIsClicked);
 
     return (
       // eslint-disable-next-line react/jsx-no-constructed-context-values
-      <StateContext.Provider value={{ activeMenu, setActiveMenu, screenSize, setScreenSize }}>
+      <StateContext.Provider value={{ activeMenu, setActiveMenu, screenSize, setScreenSize, isClicked, setIsClicked, handleClick }}>
         {children}
       </StateContext.Provider>
     );

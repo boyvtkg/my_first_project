@@ -1,11 +1,11 @@
 import React from "react";
-import aboutImg from "../assets/about.png";
-import aboutImg2 from "../assets/mobile-login.png";
+import aboutImg from "../../assets/about.png";
+import aboutImg2 from "../../assets/mobile-login.png";
 
 // motion
 import { motion } from "framer-motion";
 // variants
-import { fadeIn } from "../variants";
+import { fadeIn } from "../../variants";
 
 
 const About = () => {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 
-import banner from "../assets/banner.png"
-import banner2 from "../assets/banner2.png"
-import banner3 from "../assets/banner3.png"
+import banner from "../../assets/banner.png"
+import banner2 from "../../assets/banner2.png"
+import banner3 from "../../assets/banner3.png"
 
 
 const Home = () => {

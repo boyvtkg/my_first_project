@@ -1,7 +1,7 @@
 import React from 'react';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine } from 'react-icons/ri';
+import { AiOutlineTransaction } from "react-icons/ai";
+import { FaWpforms, FaFilter } from "react-icons/fa";
+import { IoFilter } from "react-icons/io5";
 
 export const links = [ 
   {
@@ -10,18 +10,25 @@ export const links = [
       {
         name: 'submissionform',
         title: 'Submission Form',
-        icon: <AiOutlineShoppingCart />
+        icon: <FaWpforms />
       },
       {
         name: 'transactions',
         title: 'Transactions',
-        icon: <IoMdContacts />
+        icon: <AiOutlineTransaction />
       },
       {
         name: 'transfilter',
         title: 'Filter',
-        icon: <RiContactsLine />
+        icon: <IoFilter />
       },
     ]
   }
+];
+
+export const themeColors = [
+  {
+    name: 'green-theme',
+    color: '#03C9D7',
+  },
 ];
