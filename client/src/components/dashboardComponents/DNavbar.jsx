@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
+import UserProfile from './UserProfile';
 import profileImage from '../../assets/icons/blank-profile.png';
 import { useStateContext } from '../../contexts/ContextProvider';
 
@@ -27,7 +27,8 @@ const DNavbar = () => {
     }
   }, [screenSize]);
 
-  const handleActiveMenu = () => {setActiveMenu(!activeMenu);
+  const handleActiveMenu = () => {
+    setActiveMenu(!activeMenu);
   };
   return (
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
@@ -36,7 +37,7 @@ const DNavbar = () => {
         <button
           type="button"
           onClick={handleActiveMenu}
-          style={{color: '#03C9D7'}}
+          style={{ color: '#03C9D7' }}
           className="relative text-xl rounded-full p-3 hover:bg-light-gray"
         >
           <AiOutlineMenu />
