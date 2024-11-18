@@ -9,7 +9,6 @@ export const ContextProvider = ({ children }) => {
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-    console.log(isClicked);
   };
 
   return (

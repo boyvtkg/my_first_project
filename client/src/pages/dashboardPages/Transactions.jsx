@@ -2,10 +2,10 @@ import React from 'react'
 
 const Transactions = () => {
   const transactions = [
-    { id: 1, type: "Credit", amount: 1500, date: "2024-01-15", fullName: "Thanh Pham" },
-    { id: 2, type: "Debit", amount: -500, date: "2024-01-14", fullName: "Nhut Huynh" },
-    { id: 3, type: "Credit", amount: 2000, date: "2024-01-13", fullName: "Henry Do" },
-    { id: 4, type: "Debit", amount: -750, date: "2024-01-12", fullName: "David Lam" }
+    { id: 1, type: "Credit", amount: 1500, date: "2024-01-15", fullName: "Thanh Pham", status: "Verified" },
+    { id: 2, type: "Debit", amount: -500, date: "2024-01-14", fullName: "Nhut Huynh", status: "Pending" },
+    { id: 3, type: "Credit", amount: 2000, date: "2024-01-13", fullName: "Henry Do", status: "Verified" },
+    { id: 4, type: "Debit", amount: -750, date: "2024-01-12", fullName: "David Lam", status: "Pending" }
   ];
 
   return (
@@ -27,6 +27,7 @@ const Transactions = () => {
                 <th className="p-4 text-left">Amount</th>
                 <th className="p-4 text-left">Type</th>
                 <th className="p-4 text-left">Full Name</th>
+                <th className="p-4 text-left">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@ const Transactions = () => {
                   </td>
                   <td className="p-4">{transaction.type}</td>
                   <td className="p-4">{transaction.fullName}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-500" : "text-yellow-300"}`}>{transaction.status}</td>
                 </tr>
               ))}
             </tbody>
