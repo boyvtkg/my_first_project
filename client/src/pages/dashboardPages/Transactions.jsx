@@ -3,9 +3,9 @@ import React from 'react'
 const Transactions = () => {
   const transactions = [
     { id: 1, type: "Credit", amount: 1500, date: "2024-01-15", fullName: "Thanh Pham", status: "Verified" },
-    { id: 2, type: "Debit", amount: -500, date: "2024-01-14", fullName: "Nhut Huynh", status: "Pending" },
+    { id: 2, type: "Debit", amount: 500, date: "2024-01-14", fullName: "Nhut Huynh", status: "Pending" },
     { id: 3, type: "Credit", amount: 2000, date: "2024-01-13", fullName: "Henry Do", status: "Verified" },
-    { id: 4, type: "Debit", amount: -750, date: "2024-01-12", fullName: "David Lam", status: "Pending" }
+    { id: 4, type: "Debit", amount: 750, date: "2024-01-12", fullName: "David Lam", status: "Pending" }
   ];
 
   return (
@@ -33,13 +33,11 @@ const Transactions = () => {
             <tbody>
               {transactions.map((transaction) => (
                 <tr key={transaction.id} className="border-t hover:bg-gray-50">
-                  <td className="p-4">{transaction.date}</td>
-                  <td className={`p-4 ${transaction.amount >= 0 ? "text-green-500" : "text-red-500"}`}>
-                    ${Math.abs(transaction.amount)}
-                  </td>
-                  <td className="p-4">{transaction.type}</td>
-                  <td className="p-4">{transaction.fullName}</td>
-                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-500" : "text-yellow-300"}`}>{transaction.status}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-800" : "text-yellow-600"}`}>{transaction.date}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-800" : "text-yellow-600"}`}>{transaction.amount}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-800" : "text-yellow-600"}`}>{transaction.type}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-800" : "text-yellow-600"}`}>{transaction.fullName}</td>
+                  <td className={`p-4 ${transaction.status === "Verified" ? "text-green-800" : "text-yellow-600"}`}>{transaction.status}</td>
                 </tr>
               ))}
             </tbody>

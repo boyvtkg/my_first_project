@@ -15,11 +15,11 @@ const Login = () => {
                     </div>
                     <div className="input-wrapper">
                         <input type={isPasswordShown ? 'text' : 'password'} placeholder="Password" className="input-field" required />
-                        <i onClick={() => setIsPasswordShown(prevState => !prevState)} className="material-symbols-rounded eye-icon">
-                    {isPasswordShown ? 'visibility' : 'visibility_off'}
-                    </i>
+                        <i onClick={() => setIsPasswordShown(prevState => !prevState)} className="material-sym  bols-rounded eye-icon">
+                            {isPasswordShown ? 'visibility' : 'visibility_off'}
+                        </i>
                     </div>
-                    
+
                     <button className="login-button">Log In</button>
                 </form>
             </div >
