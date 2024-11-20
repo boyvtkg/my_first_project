@@ -67,14 +67,17 @@ const SubmissionForm = () => {
 
             <div>
               <label className="block text-sm font-medium mb-1" htmlFor="amount">Amount</label>
-              <input
-                type="number"
-                id="amount"
-                value={formData.amount}
-                onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+              <div className="relative w-full">
+                <span class="text-lg absolute top-1/2 left-3 transform -translate-y-1/2">$</span>
+                <input
+                  type="number"
+                  id="amount"
+                  value={formData.amount}
+                  onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
+                  className="w-full pl-6 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
             </div>
 
             <div>
