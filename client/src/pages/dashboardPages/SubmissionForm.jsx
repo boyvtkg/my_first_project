@@ -60,8 +60,10 @@ const SubmissionForm = () => {
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               >
-                <option value="credit">Credit</option>
-                <option value="debit">Debit</option>
+                <option value="zelle">Zelle</option>
+                <option value="transfer">Transfer</option>
+                <option value="deposit">Deposit</option>
+                <option value="check">Check</option>
               </select>
             </div>
 
