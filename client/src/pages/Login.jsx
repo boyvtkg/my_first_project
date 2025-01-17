@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash, FaSpinner } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
     const [formData, setFormData] = useState({
         username: "",
         password: ""
     });
+    const [error, setError] = useState("");
     const [errors, setErrors] = useState({});
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);;
@@ -32,12 +35,28 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         if (Object.keys(errors).length === 0 && validatePassword(formData.password)) {
             setIsLoading(true);
             // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            setIsLoading(false);
-            console.log("Form submitted:", formData);
+            try {
+                const response = await axios.post("http://localhost:5000/login", {
+                    formData
+                });
+            
+                if (response.data.token) {
+                    // Save session token
+                    localStorage.setItem("token", response.data.token);
+            
+                    // Redirect to dashboard
+                    navigate("/dashboard");
+                } else {
+                    setErrors("Invalid username or password.");
+                }
+            } catch (err) {
+                console.error("Login error:", err);
+                setError("An error occurred. Please try again.");
+            }
         }
     };
 

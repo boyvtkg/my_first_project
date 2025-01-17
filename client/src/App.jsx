@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { About, Blog, MyFooter, Home, Navbar, Newsletter, Product, Services } from './components/mainComponents';
 import { SubmissionForm, Transactions, TransFilter } from './pages/dashboardPages';
